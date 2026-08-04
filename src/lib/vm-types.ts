@@ -1,6 +1,6 @@
 export type VMStatus = "off" | "running" | "paused" | "starting" | "shutting-down" | "suspended";
 
-export type OSId = "mintos" | "aurora" | "retrodos" | "nova" | "longhorn" | "classic";
+export type OSId = "mintos" | "aurora" | "retrodos" | "nova" | "classic";
 
 export interface VMFile {
   id: string;
