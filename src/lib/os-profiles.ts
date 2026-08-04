@@ -114,30 +114,6 @@ export const OS_PROFILES: Record<OSId, OSProfile> = {
     ],
     logo: "❖",
   },
-  longhorn: {
-    id: "longhorn",
-    name: "Longhorn Concept",
-    version: "0.9 Preview",
-    era: "Experimental",
-    interfaceType: "Glass-like translucent desktop",
-    recommendedRam: 6,
-    recommendedStorage: 48,
-    difficulty: "Intermediate",
-    tagline: "An early-concept glass interface.",
-    description:
-      "A fictional early-development operating system exploring translucent, glass-like interface concepts.",
-    accent: "oklch(0.78 0.14 210)",
-    wallpaper:
-      "linear-gradient(135deg, oklch(0.28 0.07 220), oklch(0.16 0.03 240))",
-    bootStyle: "glass",
-    bootMessages: [
-      "Initialising glass compositor…",
-      "Loading experimental shell…",
-      "Registering widgets…",
-      "Welcome to the concept.",
-    ],
-    logo: "◈",
-  },
   classic: {
     id: "classic",
     name: "Classic Desktop",

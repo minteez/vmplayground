@@ -53,7 +53,21 @@ function loadState(): AppState {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return initialState;
-    return JSON.parse(raw) as AppState;
+    const parsed = JSON.parse(raw) as AppState;
+    const removed = parsed.vms?.filter((v) => (v.os as string) === "longhorn") ?? [];
+    const vms = parsed.vms?.filter((v) => (v.os as string) !== "longhorn") ?? [];
+    const activity = parsed.activity ?? [];
+    if (removed.length > 0) {
+      activity.unshift({
+        id: uid(),
+        timestamp: Date.now(),
+        vmId: removed.map((v) => v.id).join(","),
+        vmName: removed.map((v) => v.name).join(", "),
+        type: "vm.delete",
+        description: `Removed ${removed.length} VM(s) using the retired Longhorn Concept OS profile`,
+      });
+    }
+    return { ...parsed, vms, activity: activity.slice(0, 200) };
   } catch {
     return initialState;
   }
