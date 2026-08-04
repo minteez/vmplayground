@@ -54,8 +54,8 @@ function loadState(): AppState {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return initialState;
     const parsed = JSON.parse(raw) as AppState;
-    const removed = parsed.vms?.filter((v) => v.os === "longhorn") ?? [];
-    const vms = parsed.vms?.filter((v) => v.os !== "longhorn") ?? [];
+    const removed = parsed.vms?.filter((v) => (v.os as string) === "longhorn") ?? [];
+    const vms = parsed.vms?.filter((v) => (v.os as string) !== "longhorn") ?? [];
     const activity = parsed.activity ?? [];
     if (removed.length > 0) {
       activity.unshift({
