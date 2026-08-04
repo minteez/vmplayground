@@ -8,7 +8,7 @@ export function ExploreOS({ setView }: { setView: (v: View) => void }) {
     <div>
       <header className="mb-6">
         <h1 className="text-2xl font-semibold">Explore Operating Systems</h1>
-        <p className="text-sm text-muted-foreground">Six fictional systems ready to boot inside VM Lab. All simulated — nothing installs on your machine.</p>
+        <p className="text-sm text-muted-foreground">Five fictional systems ready to boot inside VM Lab. All simulated — nothing installs on your machine.</p>
       </header>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {OS_LIST.map((os) => (
