@@ -8,6 +8,7 @@ import { BootSequence } from "./boot-sequence";
 import { Desktop } from "./desktop";
 import { ExploreOS } from "./explore-os";
 import { ActivityView } from "./activity";
+import { AboutView } from "./about";
 
 export function VMLabApp() {
   const [view, setView] = useState<View>({ kind: "dashboard" });
@@ -21,6 +22,7 @@ export function VMLabApp() {
         {view.kind === "desktop" && <Desktop vmId={view.id} setView={setView} />}
         {view.kind === "explore" && <ExploreOS setView={setView} />}
         {view.kind === "activity" && <ActivityView />}
+        {view.kind === "about" && <AboutView />}
       </Shell>
     </VMStoreProvider>
   );

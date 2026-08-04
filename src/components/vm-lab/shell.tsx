@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { LayoutDashboard, Server, Package, Activity as ActivityIcon, Sparkles, Menu, X } from "lucide-react";
+import { LayoutDashboard, Server, Package, Activity as ActivityIcon, Sparkles, Menu, X, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +8,7 @@ export type View =
   | { kind: "vm"; id: string; tab?: string }
   | { kind: "explore" }
   | { kind: "activity" }
+  | { kind: "about" }
   | { kind: "wizard" }
   | { kind: "boot"; id: string }
   | { kind: "desktop"; id: string };
@@ -22,6 +23,7 @@ const NAV = [
   { kind: "dashboard", label: "VM Manager", icon: LayoutDashboard },
   { kind: "explore", label: "Explore OS", icon: Package },
   { kind: "activity", label: "Activity", icon: ActivityIcon },
+  { kind: "about", label: "About", icon: Info },
 ] as const;
 
 export function Shell({ view, setView, children }: ShellProps) {
