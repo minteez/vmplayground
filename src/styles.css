@@ -156,3 +156,8 @@
     }
   }
 }
+
+/* Hide Lovable watermark badge */
+#lovable-badge {
+  display: none !important;
+}
