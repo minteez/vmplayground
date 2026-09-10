@@ -1,1218 +1,716 @@
-# VM Playground
+# 🖥️ VM Playground
 
-Build a polished, interactive web application called “VM Lab” — a browser-based Virtual Machine Laboratory combined with a simulated Operating System playground.
+**VM Playground** is an interactive browser-based virtual machine laboratory and operating-system simulator designed to bring the experience of creating, configuring, booting, and exploring virtual computers directly into the web browser.
 
-The application should feel like a simplified combination of a virtualisation manager such as VirtualBox/VMware, a computer operating system desktop, and an educational operating-system laboratory. The purpose is to let users create simulated virtual machines, configure their virtual hardware, start them, watch a simulated boot process, and interact with fictional operating systems inside the browser. This is a simulation only: do not execute real virtual machines, access the host operating system, run real shell commands, access local files, or perform any potentially unsafe system operations.
+Instead of requiring VirtualBox, VMware, Hyper-V, or an actual virtual machine, VM Playground provides a **safe, entirely simulated environment** where users can experiment with virtual hardware, operating-system boot processes, desktop environments, applications, storage, snapshots, and system settings.
 
-CORE CONCEPT
+> **A virtual computer laboratory — without needing a real virtual machine.**
 
-The user should be able to:
+---
 
-Create a virtual machine.
+## ✨ What is VM Playground?
 
-Give it a name.
+VM Playground combines the ideas of a:
 
-Select a simulated operating system.
+* Virtual machine manager
+* Operating-system simulator
+* Computer laboratory
+* Retro-computing playground
+* Interactive desktop environment
 
-Configure virtual hardware such as RAM, CPU cores, storage, and graphics memory.
+Users can create virtual machines, select an operating system, configure virtual hardware, start the machine, watch a simulated boot process, and enter an interactive desktop.
 
-Choose a virtual disk size.
+The project is designed primarily as an **educational and experimental web experience**, demonstrating concepts related to virtualization, operating systems, hardware resources, boot processes, desktop environments, file systems, and computer interfaces.
 
-Start the virtual machine.
+Everything takes place inside the browser.
 
-Watch an animated BIOS/UEFI-style startup sequence.
+---
 
-Watch a simulated operating system boot sequence.
+# 🚀 Features
 
-Enter an interactive simulated desktop.
+## 🖥️ Virtual Machine Manager
 
-Open applications inside the simulated OS.
+VM Playground includes a dedicated VM management environment where users can create and manage multiple simulated virtual machines.
 
-Shut down, restart, pause, or reset the virtual machine.
+Each VM can contain information such as:
 
-Save the VM configuration in the browser.
+* Virtual machine name
+* Operating system
+* RAM allocation
+* CPU cores
+* Storage capacity
+* Graphics memory
+* Network settings
+* Audio configuration
+* USB configuration
+* VM status
+* Snapshot history
 
-Create snapshots of the simulated VM state.
+Possible VM states include:
 
-View simulated resource usage.
+* Powered Off
+* Running
+* Paused
+* Starting
+* Shutting Down
 
-Experiment with different configurations and operating systems.
+The VM manager provides a central location for creating, launching, configuring, cloning, and deleting machines.
 
-The website should feel like a real technical application rather than a simple landing page.
+---
 
-1. OVERALL VISUAL DESIGN
+## 🛠️ Create a Virtual Machine
 
-Use a modern dark desktop-application interface inspired by professional virtualisation software, developer tools, operating-system settings panels, and futuristic computer laboratories.
+The VM creation process is designed like a simplified virtualization wizard.
 
-The visual style should combine:
+Users can configure:
 
-Dark graphite backgrounds
+### Basic Information
 
-Deep charcoal panels
+* VM name
+* Description
+* Operating system
 
-Subtle borders
+### Virtual Hardware
 
-Slightly rounded corners
+* RAM
+* CPU cores
+* Graphics memory
+* Storage
+* Network adapter
+* Audio
+* USB controller
 
-Modern glass-like panels where appropriate
+### Virtual Disk
 
-Technical interface elements
+Users can select different simulated storage configurations such as:
 
-Terminal-inspired typography in selected areas
+* Virtual SSD
+* Virtual HDD
+* Dynamic disk
+* Fixed disk
 
-Clear icons
+A configuration overview helps users understand whether their selected virtual hardware is suitable for the chosen simulated operating system.
 
-Smooth but restrained animations
+---
 
-Strong visual hierarchy
+# 💻 Simulated Operating Systems
 
-Professional spacing
+VM Playground contains fictional operating-system environments designed specifically for the project.
 
-High-quality responsive layouts
+These systems are intentionally original rather than being exact copies of commercial operating systems.
 
-The interface should not look like a generic dashboard template.
+Current simulated environments include:
 
-The application should feel like a real piece of software called VM Lab.
+### 🌱 MintOS
 
-Use a consistent design system throughout the entire application.
+A modern fictional operating system designed as the primary VM Playground environment.
 
-Include:
+MintOS focuses on:
 
-Responsive desktop layout
+* Clean desktop design
+* Customisation
+* Productivity
+* General-purpose computing
 
-Tablet layout
+### 🌌 Aurora Linux
 
-Mobile layout
+A fictional Linux-inspired environment intended for users interested in technical and developer-oriented interfaces.
 
-Keyboard-friendly navigation
+It features a more technical visual identity and terminal-oriented environment.
 
-Visible focus states
+### 💾 RetroDOS
 
-Accessible colour contrast
+A fictional DOS-inspired operating system focused on:
 
-Semantic HTML
+* Command-line interaction
+* Retro computing
+* Keyboard-driven navigation
+* Classic text interfaces
 
-Reduced-motion support
+### 🪟 Nova Windows
 
-Tooltips for unfamiliar technical controls
+A fictional modern desktop operating system inspired by broad contemporary desktop-computing conventions while maintaining its own original branding and interface.
 
-Confirmation dialogs for destructive actions
+### 🖥️ Classic Desktop
 
-Avoid:
+A fictional retro graphical environment inspired by older generations of personal-computer interfaces.
 
-Excessive neon
+> **Note:** The previously planned **Longhorn Concept** operating system has been removed from VM Playground and is no longer part of the project.
 
-Excessive gradients
+---
 
-Overly flashy animations
+# ⚡ Simulated Boot Experience
 
-Fake real-world system access
+Starting a VM does not immediately display the desktop.
 
-Actual execution of shell commands
+Instead, VM Playground provides a multi-stage simulated startup sequence.
 
-Access to the user's files
+The process can include:
 
-Any real virtualisation technology
+### 1. Power On
 
-2. APPLICATION STRUCTURE
+The virtual machine powers on and begins initialisation.
 
-Create the following main sections:
+### 2. Virtual Hardware Initialisation
 
-A. VM MANAGER
+The simulator displays fictional hardware-detection messages such as:
 
-This is the main home screen after entering the application.
+* Processor initialisation
+* Memory check
+* Storage detection
+* Display adapter initialisation
+* Virtual device detection
 
-Display:
+### 3. Bootloader
 
-VM Lab logo
+A fictional boot manager appears and identifies the selected operating system.
 
-Application name
+### 4. Operating-System Startup
 
-Navigation sidebar
+The selected operating system performs its own unique simulated startup sequence.
 
-“Create Virtual Machine” button
+Different operating systems have different visual identities and boot experiences.
 
-List of existing virtual machines
+The result is a satisfying transition from:
 
-Recent activity
+**Virtual Hardware → Bootloader → Operating System → Desktop**
 
-Storage overview
+---
 
-Quick statistics
+# 🖥️ Interactive Desktop Environment
 
-The main dashboard should show cards such as:
+After the boot process completes, users enter the simulated operating-system desktop.
 
-Total Virtual Machines
+The desktop can contain:
 
-Running VMs
+* Wallpaper
+* Desktop icons
+* Taskbar or dock
+* Start menu/launcher
+* System tray
+* Clock
+* Notifications
+* Application windows
 
-Powered Off VMs
+Users can interact with windows and launch applications within the simulated operating system.
 
-Total Simulated Storage
+The desktop environment is designed to feel like an actual computer rather than a collection of static web components.
 
-Snapshots Created
+---
 
-The VM list should show each machine as a professional card or table row.
+# 📁 Simulated File Manager
 
-Each VM should display:
+VM Playground includes a fictional file system.
 
-VM name
+Example directories can include:
 
-Operating system
-
-Status
-
-RAM allocation
-
-CPU cores
-
-Storage size
-
-Last used time
-
-Snapshot count
-
-Possible statuses:
-
-Powered Off
-
-Running
-
-Paused
-
-Starting
-
-Shutting Down
-
-Suspended
-
-Use clear status indicators.
-
-Each VM card should have actions:
-
-Start
-
-Open
-
-Settings
-
-Clone
-
-Snapshot
-
-Delete
-
-Deleting a VM must show a confirmation dialog.
-
-3. CREATE VIRTUAL MACHINE WIZARD
-
-Create a multi-step VM creation wizard.
-
-The wizard should have a clear progress indicator.
-
-Step 1: Basic Information
-
-Ask for:
-
-Virtual machine name
-
-Description
-
-Operating system family
-
-Example names:
-
-Windows Longhorn Lab
-
-MintOS Test Machine
-
-Linux Playground
-
-Retro Windows Lab
-
-Experimental VM
-
-Step 2: Operating System
-
-Allow the user to choose from simulated operating systems.
-
-Include fictional and historical OS profiles such as:
-
-MintOS
-
-A fictional modern experimental operating system created specifically for this application.
-
-Aurora Linux
-
-A fictional Linux-inspired system focused on customisation and development.
-
-RetroDOS
-
-A fictional DOS-inspired command-line operating system.
-
-Nova Windows
-
-A fictional modern graphical operating system inspired by contemporary desktop environments.
-
-Longhorn Concept
-
-A fictional early-development-inspired operating system with experimental glass-like interface concepts.
-
-Classic Desktop
-
-A fictional operating system inspired by older graphical desktop systems.
-
-Each OS should have:
-
-Name
-
-Version
-
-Release era
-
-Interface type
-
-Recommended RAM
-
-Recommended storage
-
-Difficulty level
-
-Description
-
-Visual theme
-
-Do not directly copy copyrighted operating-system interfaces. Use original fictional designs inspired by broad eras and design concepts.
-
-Step 3: Virtual Hardware
-
-Allow the user to configure:
-
-RAM
-
-Virtual CPU cores
-
-Virtual storage
-
-Graphics memory
-
-Network adapter toggle
-
-Sound device toggle
-
-USB controller toggle
-
-Use sliders and dropdowns.
-
-Display a live “Configuration Health” panel that evaluates whether the selected hardware is:
-
-Underpowered
-
-Balanced
-
-Recommended
-
-Overconfigured
-
-For example:
-
-“Your selected configuration should provide a smooth experience for this simulated OS.”
-
-This is only a fictional simulation and should not claim to represent actual hardware performance.
-
-Step 4: Virtual Disk
-
-Allow the user to:
-
-Create a new virtual disk
-
-Choose disk size
-
-Choose simulated disk type
-
-Options:
-
-Virtual SSD
-
-Virtual HDD
-
-Dynamic Disk
-
-Fixed Disk
-
-Show a visual storage allocation bar.
-
-Step 5: Summary
-
-Display a complete configuration summary:
-
-VM name
-
-Selected operating system
-
-RAM
-
-CPU cores
-
-Storage
-
-Graphics memory
-
-Enabled virtual devices
-
-Add:
-
-Create Virtual Machine
-
-When clicked, create the VM in local browser state.
-
-4. VM DETAILS PAGE
-
-When a user selects a VM, open a detailed management page.
-
-Create a large header containing:
-
-VM name
-
-Operating system
-
-Status
-
-Power controls
-
-Power controls:
-
-Start
-
-Pause
-
-Resume
-
-Restart
-
-Shut Down
-
-Force Power Off
-
-Use realistic confirmation dialogs for actions such as Force Power Off.
-
-Create tabs:
-
-Overview
-
-Console
-
-Hardware
-
-Storage
-
-Snapshots
-
-Activity
-
-Settings
-
-5. VM OVERVIEW
-
-The Overview tab should show:
-
-VM status
-
-OS information
-
-Uptime
-
-Simulated CPU usage
-
-Simulated RAM usage
-
-Simulated storage usage
-
-Network activity
-
-Recent events
-
-Use animated but subtle charts.
-
-The metrics should be simulated and change slightly while the VM is running.
-
-Example:
-
-CPU Usage: 23%
-
-Memory Usage: 2.4 GB / 4 GB
-
-Storage Usage: 18.7 GB / 64 GB
-
-Network Activity: 0.8 MB/s
-
-These numbers are purely simulated.
-
-Add a visual “Virtual Hardware” summary:
-
-CPU
-
-RAM
-
-Storage
-
-Graphics
-
-Network
-
-Audio
-
-6. SIMULATED BOOT PROCESS
-
-When the user starts a VM, do not immediately show the desktop.
-
-Create a multi-stage boot sequence.
-
-Stage 1: Virtual Hardware Initialisation
-
-Display:
-
-VM Lab Virtual BIOS
-
-Memory test
-
-CPU initialisation
-
-Storage detection
-
-Virtual device detection
-
-Example visual messages:
-
-“Initialising virtual processor…”
-
-“Checking simulated memory…”
-
-“Detecting virtual storage…”
-
-“Initialising display adapter…”
-
-Stage 2: Bootloader
-
-Show a fictional bootloader interface.
-
-For example:
-
-VM LAB BOOT MANAGER
-
-Select operating system:
-
-MintOS
-
-Press ENTER to continue
-
-Do not use real operating-system boot screens or copyrighted logos.
-
-Stage 3: Operating System Boot
-
-Display a custom boot animation based on the selected fictional OS.
-
-Each OS should have a different visual identity.
-
-For example:
-
-MintOS: clean modern startup animation
-
-RetroDOS: text-based startup sequence
-
-Aurora Linux: terminal-inspired boot process
-
-Nova Windows: modern animated loading interface
-
-Longhorn Concept: experimental glass-like startup
-
-Add:
-
-Loading progress
-
-Boot messages
-
-Animated logo or abstract symbol
-
-“Press ESC to view details” option
-
-The user should be able to skip the boot animation after it has been viewed once.
-
-7. SIMULATED OPERATING SYSTEM DESKTOP
-
-After booting, display a fully interactive simulated desktop.
-
-This is the most important part of the application.
-
-The desktop should contain:
-
-Wallpaper
-
-Taskbar or dock
-
-Start menu or launcher
-
-Desktop icons
-
-System tray
-
-Clock
-
-Notifications
-
-Window system
-
-Users should be able to:
-
-Open applications
-
-Move windows
-
-Minimise windows
-
-Maximise windows
-
-Close windows
-
-Resize windows if practical
-
-Switch between open applications
-
-Use keyboard shortcuts
-
-Create an original fictional interface. Do not clone Windows, macOS, or any other copyrighted operating system exactly.
-
-8. SIMULATED APPLICATIONS
-
-Include functional simulated applications inside the virtual OS.
-
-File Manager
-
-Create a fake file system.
-
-Example folders:
-
+```text
 Home
+├── Documents
+├── Downloads
+├── Pictures
+├── Projects
+├── Applications
+└── System
+```
 
-Documents
+Users can interact with simulated files and folders without accessing the real computer's file system.
 
-Downloads
+The file manager can support operations such as:
 
-Pictures
+* Browse folders
+* Create folders
+* Create text files
+* Rename files
+* Delete simulated files
+* Open files
+* Search simulated files
 
-Projects
+All file operations remain inside the simulated environment.
 
-System
+---
 
-Applications
+# ⌨️ Safe Simulated Terminal
 
-Users should be able to:
+The project includes a terminal application designed to resemble a real command-line interface while remaining completely sandboxed.
 
-Navigate folders
+Supported commands can include:
 
-Create folders
-
-Create text files
-
-Rename files
-
-Delete simulated files
-
-Open text files
-
-Search the fake file system
-
-All files must exist only in the application's simulated data layer.
-
-Never access the user's real computer files.
-
-Text Editor
-
-Create a functional text editor.
-
-Features:
-
-New document
-
-Open simulated file
-
-Save simulated file
-
-Basic text editing
-
-Word count
-
-Character count
-
-Calculator
-
-Create a working calculator inside the simulated OS.
-
-Support:
-
-Basic arithmetic
-
-Decimals
-
-Clear
-
-Delete
-
-Keyboard input
-
-Settings
-
-Create a simulated OS settings application.
-
-Sections:
-
-Appearance
-
-Display
-
-Personalisation
-
-Sound
-
-Network
-
-Storage
-
-System Information
-
-Allow users to change:
-
-Wallpaper
-
-Accent colour
-
-Theme
-
-Interface density
-
-Clock format
-
-Changes should affect the simulated desktop.
-
-System Monitor
-
-Create a simulated task manager/system monitor.
-
-Display:
-
-Running applications
-
-CPU usage
-
-Memory usage
-
-Storage activity
-
-Network activity
-
-Allow users to close simulated applications.
-
-Terminal
-
-Create a safe simulated terminal.
-
-The terminal must NOT execute real commands.
-
-It should support only predefined fictional commands such as:
-
+```text
 help
-
 clear
-
 about
-
 sysinfo
-
 neofetch
-
 apps
-
 date
-
 uptime
-
 storage
-
 memory
-
 cpu
-
 echo
-
 history
+```
 
-Each command should return simulated output.
+The terminal does **not** execute commands on the user's computer.
 
-If a user types an unsupported command, display:
+Unsupported commands return a simulated response rather than being sent to an actual shell.
 
-“Command not recognised in VM Lab simulation.”
+This provides the feel of terminal interaction while maintaining a safe client-side architecture.
 
-Make it visually convincing but completely sandboxed.
+---
 
-9. SNAPSHOT SYSTEM
+# 📝 Text Editor
 
-Create a snapshot feature inspired by virtual machine snapshots.
+The simulated operating systems include a text-editing environment.
 
-Users should be able to:
+Users can:
 
-Create a snapshot
+* Create documents
+* Type text
+* Edit content
+* Save simulated files
+* Open existing simulated files
 
-Name a snapshot
+The application is integrated with the fictional file system.
 
-Add a description
+---
 
-View snapshot history
+# 🧮 Calculator
 
-Restore a snapshot
+VM Playground includes a working calculator application inside the simulated desktop.
 
-Delete a snapshot
+It supports:
 
-Display snapshots in a visual timeline.
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Decimals
+* Percentages
+* Keyboard input
+* Clear/backspace operations
+
+---
+
+# 📊 System Monitor
+
+The simulated operating system includes a system monitoring interface.
+
+It displays simulated values such as:
+
+* CPU usage
+* RAM usage
+* Storage usage
+* Network activity
+* Temperature
+* Running processes
+
+The values can change dynamically while the VM is running to create the impression of a live system.
+
+These measurements are **simulated values**, not measurements of the user's actual hardware.
+
+---
+
+# ⚙️ System Settings
+
+Each simulated operating system contains a settings application.
+
+Possible settings include:
+
+* Appearance
+* Wallpaper
+* Accent colour
+* Display
+* Sound
+* Network
+* Storage
+* System information
+* Interface preferences
+
+Customisation changes are reflected within the simulated desktop.
+
+---
+
+# 📸 Snapshot System
+
+VM Playground supports simulated virtual-machine snapshots.
+
+A snapshot stores the current state of the simulated machine.
+
+Users can:
+
+* Create snapshots
+* Name snapshots
+* Add descriptions
+* View snapshot history
+* Restore snapshots
+* Delete snapshots
+
+Snapshots are displayed as a timeline so users can understand how the virtual machine evolved.
 
 Example:
 
-Initial Installation
-↓
+```text
+Initial Setup
+      ↓
 Configured Desktop
-↓
+      ↓
 Installed Applications
-↓
-Experiment 1
+      ↓
+Experiment
+```
 
-When a snapshot is restored, update the simulated VM state.
+This helps demonstrate one of the important concepts behind virtual-machine management.
 
-Add a confirmation dialog before restoring or deleting snapshots.
+---
 
-10. VM CLONING
+# 🧬 VM Cloning
 
-Allow users to clone an existing VM.
+Users can clone an existing virtual machine.
 
-When cloning:
+Cloning can preserve:
 
-Ask for a new VM name
+* VM configuration
+* Operating-system selection
+* Simulated storage
+* Snapshot information
 
-Allow the user to choose whether to copy snapshots
+The clone receives its own VM identity and can be configured independently.
 
-Create a new simulated VM with the same configuration
+---
 
-Display a progress animation while cloning.
+# 🔄 VM Controls
 
-Example:
+VM Playground provides familiar virtual-machine controls:
 
-Preparing virtual disk…
+* Start
+* Pause
+* Resume
+* Restart
+* Shut Down
+* Force Power Off
 
-Copying simulated configuration…
+The interface also includes simulated startup and shutdown sequences.
 
-Creating cloned machine…
+---
 
-Clone completed.
+# 📡 Simulated Network Environment
 
-11. VM SETTINGS
+The virtual environment can represent network activity without interacting with real networks.
 
-Create a detailed settings panel.
+A simulated network may contain:
 
-Sections:
+```text
+Virtual Machine
+       │
+     Router
+       │
+     Server
+       │
+   Simulated Internet
+```
 
-General
+Network activity can be visualised using fictional packet movement and connection indicators.
 
-VM name
+No real network scanning or network access is performed.
 
-Description
+---
 
-OS profile
+# 🎮 Built-In Mini Games
 
-System
+The simulated environment can contain small browser-based games for additional experimentation.
 
-RAM
+Possible examples include:
 
-CPU cores
+* Reaction Test
+* Number Guessing
+* Memory Challenge
+* Typing Challenge
 
-Boot priority
+Scores can be stored locally in the browser.
 
-Display
+---
 
-Graphics memory
+# 🧩 Easter Eggs
 
-Resolution
+VM Playground contains hidden details for curious users.
 
-Scaling
+Possible Easter eggs include:
 
-Storage
+* Hidden files
+* Secret terminal commands
+* Developer references
+* Alternate system messages
+* Hidden shortcuts
+* Special interface states
 
-Virtual disk size
+The goal is to reward exploration.
 
-Disk type
+---
 
-Network
+# 💾 Browser Persistence
 
-Network enabled/disabled
+VM Playground is designed to preserve simulated state using browser-side storage where appropriate.
 
-Simulated connection mode
+Information that may be persisted includes:
 
-Audio
+* Virtual machines
+* VM configurations
+* Simulated files
+* Snapshots
+* User preferences
+* Desktop customisation
+* Game scores
 
-Sound enabled/disabled
+This allows users to return later without losing their virtual laboratory.
 
-USB
+---
 
-USB controller enabled/disabled
+# 🔒 Safety & Simulation
 
-Advanced
+VM Playground is deliberately designed as a simulation.
 
-Reset simulated hardware
+It does **not**:
 
-Clear simulated storage
+* Execute real virtual machines
+* Execute real shell commands
+* Access the host operating system
+* Access real files
+* Scan real networks
+* Modify the user's computer
+* Run arbitrary user-entered code
+* Install software
+* Change actual hardware configuration
 
-Delete VM
+Virtual CPU, RAM, storage, network, temperature, and performance values are fictional representations intended for demonstration and entertainment.
 
-Add warnings before destructive operations.
+---
 
-12. MULTIPLE OPERATING SYSTEMS
+# 🎨 Design Philosophy
 
-Create distinct visual themes for different simulated OS environments.
+The visual identity of VM Playground combines:
 
-MintOS
+**Modern software design + retro computing + virtualisation technology.**
 
-Modern, clean, minimal, highly customisable.
+The interface uses a dark technical aesthetic with:
 
-RetroDOS
+* Graphite surfaces
+* Midnight-blue backgrounds
+* Cyan accents
+* Green terminal elements
+* Amber system indicators
+* Glass-like panels
+* Subtle borders
+* Soft shadows
+* Technical typography
 
-Command-line focused, monochrome terminal-style interface, keyboard-driven navigation.
+Retro effects such as CRT-inspired elements and scanlines are used sparingly so that the application remains modern and readable.
 
-Aurora Linux
+The goal is to make the website feel like:
 
-Technical, modular, developer-focused, customisable panels.
+> **A virtual computer lab built inside the browser.**
 
-Nova Windows
+---
 
-Familiar modern desktop concepts but with an original interface and branding.
+# 📱 Responsive Design
 
-Longhorn Concept
+VM Playground is designed to work across:
 
-Experimental futuristic interface with translucent panels, visual widgets, and early-concept software design.
+* Desktop
+* Laptop
+* Tablet
+* Mobile
 
-Classic Desktop
+The simulated desktop adapts to smaller displays rather than simply shrinking the desktop version.
 
-Retro-inspired graphical interface with a simpler layout and old-computer aesthetic.
+Mobile layouts prioritise:
 
-Each OS should have:
+* Touch-friendly controls
+* Readable windows
+* Responsive applications
+* Accessible navigation
+* Compact VM controls
 
-Unique wallpaper
+---
 
-Unique desktop layout
+# ♿ Accessibility
 
-Unique taskbar or launcher
+The interface aims to provide a usable experience for as many visitors as possible.
 
-Unique boot animation
+Accessibility considerations include:
 
-Unique system settings
+* Keyboard navigation
+* Focus indicators
+* Accessible buttons
+* Appropriate labels
+* Colour-contrast considerations
+* Reduced-motion support
+* Responsive typography
 
-Unique default applications
+---
 
-Unique colour scheme
+# 🧱 Technology
 
-13. OS EXPLORATION MODE
+VM Playground is a frontend web project designed to run directly in the browser.
 
-Add a separate “Explore OS” section outside the VM manager.
+Core technologies include:
 
-This allows users to browse operating systems without creating a VM.
+* HTML5
+* CSS3
+* JavaScript
 
-For every OS, display:
+The project is designed to be deployable as a static website through platforms such as:
 
-Description
+* GitHub Pages
+* Netlify
+* Vercel static hosting
+* Other static hosting providers
 
-Era
+No traditional server is required for the core simulation.
 
-Interface style
+---
 
-Recommended virtual hardware
+# 📂 Project Architecture
 
-Screenshots or original UI previews
+The application is structured around reusable UI components and simulated data.
 
-Interesting facts
+A typical architecture can contain:
 
-Available applications
+```text
+VM-Playground/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+└── README.md
+```
 
-Difficulty level
+The exact structure may evolve as the application grows.
 
-Add a button:
+The simulated operating systems and VM configurations should remain data-driven so that additional environments can be introduced without rewriting the entire application.
 
-“Create VM with this OS”
+---
 
-14. ACTIVITY LOG
+# 🧪 Educational Purpose
 
-Create a global activity log.
+Although VM Playground is designed to be fun, it also demonstrates several computer-science concepts.
 
-Examples:
+Visitors can gain an intuitive understanding of:
 
-VM created
+* Virtual machines
+* Virtual hardware
+* RAM allocation
+* CPU allocation
+* Virtual storage
+* Boot processes
+* Operating systems
+* File systems
+* Desktop environments
+* Processes
+* Network concepts
+* Snapshots
+* Cloning
+* System configuration
 
-VM started
+The project turns these abstract concepts into something users can explore interactively.
 
-VM paused
+---
 
-Snapshot created
+# 🗺️ Future Possibilities
 
-Snapshot restored
+VM Playground is designed to be extensible.
 
-VM cloned
+Future versions could introduce:
 
-Settings changed
+* More fictional operating systems
+* More historical-inspired environments
+* Advanced simulated hardware
+* More applications
+* Virtual disk management
+* More realistic boot diagnostics
+* Expanded networking simulations
+* More games
+* Achievements
+* Advanced OS customisation
+* Additional snapshot features
+* Virtual BIOS/UEFI configuration
+* Simulated package management
+* More Easter eggs
 
-Simulated application opened
+These are potential future directions and are not necessarily implemented in the current release.
 
-Display:
+---
 
-Timestamp
+# 👨‍💻 Developer
 
-Event type
+**Syed Muntasir Muhammad**
+Known online as **Mint / Minteez**
 
-VM name
+Mint is a student and technology enthusiast interested in computers, operating systems, cybersecurity, mathematics, artificial intelligence, and software development.
 
-Description
+VM Playground is part of a broader collection of experimental and educational technology projects exploring what can be built through modern web development.
 
-Add filtering by:
+### Connect
 
-VM
+* Instagram: https://www.instagram.com/sudo.minteez
+* YouTube: https://www.youtube.com/@thecubermint
+* GitHub: https://github.com/minteez
+* Portfolio: https://minteez.lovable.app
 
-Event type
+---
 
-Date
+# 📜 Disclaimer
 
-15. ONBOARDING EXPERIENCE
+VM Playground is an independent educational and experimental project.
 
-When the user first opens the application, show a short onboarding flow.
+The operating-system environments represented in the project are simulated experiences. Any resemblance to real operating systems or computing platforms is for inspiration, education, or interface experimentation.
 
-Screen 1:
+VM Playground is not affiliated with Microsoft, Apple, Google, Linux, VMware, Oracle, VirtualBox, or any other operating-system or virtualization vendor unless explicitly stated.
 
-“Welcome to VM Lab”
+All product names, trademarks, and related intellectual property belong to their respective owners.
 
-Screen 2:
+---
 
-“Create simulated virtual machines.”
+# 📊 Project Status
 
-Screen 3:
+**Status:** Active / Experimental
 
-“Experiment with virtual hardware.”
+**Build:** v1.0.0
 
-Screen 4:
+**Platform:** Web Browser
 
-“Boot fictional operating systems.”
+**Architecture:** Client-side simulation
 
-Screen 5:
+**Hosting:** Static Web Hosting / GitHub Pages compatible
 
-“Explore interactive simulated desktops.”
+---
 
-Finish with:
+# 📄 License
 
-“Create Your First VM”
-
-Allow the user to skip onboarding.
-
-16. DEMO MODE
-
-Include a “Try Demo VM” button.
-
-This should instantly create a preconfigured fictional VM called:
-
-“MintOS Demo”
-
-The user should be able to boot it immediately and explore the simulated desktop.
-
-This makes the website immediately fun without requiring configuration.
-
-17. EMPTY STATES
-
-Design polished empty states.
+Add the project's chosen license here.
 
 For example:
 
-No virtual machines yet.
+**MIT License**
 
-“Your virtual laboratory is empty.”
+if the repository is intended to be released under the MIT License.
 
-Button:
+---
 
-“Create Your First VM”
+## 🖥️ VM Playground
 
-For no snapshots:
+**Create a computer.**
 
-“This machine has no snapshots yet.”
+**Configure it.**
 
-Button:
+**Boot it.**
 
-“Create Snapshot”
+**Explore it.**
 
-For no activity:
-
-“Activity will appear here as you experiment.”
-
-18. DATA PERSISTENCE
-
-Use browser-side persistence so that simulated VMs remain available after refreshing the page.
-
-Use local browser storage or another suitable client-side persistence mechanism.
-
-Store:
-
-VM configurations
-
-VM status
-
-Simulated files
-
-Snapshots
-
-Settings
-
-Activity logs
-
-Desktop customisation
-
-Do not use real file-system access.
-
-Do not execute real commands.
-
-Do not run real virtual machines.
-
-Everything should be a safe browser-based simulation.
-
-19. INTERACTION QUALITY
-
-Make every important control functional.
-
-Avoid creating buttons that do nothing.
-
-Examples:
-
-Start must start the simulated boot sequence.
-
-Pause must pause the simulated VM state.
-
-Restart must trigger the boot process again.
-
-Shut Down must show a shutdown animation.
-
-Snapshot must save the current simulated state.
-
-Restore must restore a previous simulated state.
-
-Clone must create a new VM.
-
-File Manager must interact with the simulated file system.
-
-Settings must affect the simulated desktop.
-
-Terminal must respond to supported simulated commands.
-
-Use smooth transitions between:
-
-VM manager
-
-VM details
-
-Boot screen
-
-Simulated desktop
-
-Applications
-
-Settings
-
-20. RESPONSIVE DESIGN
-
-Desktop should be the primary experience because the application resembles a desktop virtualisation tool.
-
-On smaller screens:
-
-Collapse the sidebar
-
-Use a mobile navigation menu
-
-Stack dashboard cards
-
-Make VM controls easily tappable
-
-Allow the simulated desktop to scale appropriately
-
-Make applications responsive
-
-The interface should remain usable on phones and tablets.
-
-21. ACCESSIBILITY
-
-Include:
-
-Keyboard navigation
-
-Focus indicators
-
-ARIA labels where necessary
-
-Sufficient colour contrast
-
-Reduced-motion mode
-
-Screen-reader-friendly labels
-
-Accessible modals
-
-Escape key support for closing dialogs
-
-No information conveyed by colour alone
-
-22. FINAL EXPERIENCE
-
-The final website should feel like an impressive interactive technical playground.
-
-A user should be able to open the website and think:
-
-“I can create my own virtual computer, configure its hardware, boot an operating system, open applications, use a fake terminal, create snapshots, and experiment with the entire environment.”
-
-The website should feel more like a functional software product than a conventional website.
-
-Prioritise:
-
-A polished VM Manager.
-
-A satisfying simulated boot process.
-
-An interactive simulated desktop.
-
-Functional simulated applications.
-
-Snapshots and VM management.
-
-Distinct fictional operating systems.
-
-A professional, responsive, accessible interface.
-
-Build the application with clean reusable components and a clear architecture so that additional fictional operating systems, applications, simulated hardware components, boot sequences, and features can easily be added in the future.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://vmplayground.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/71b45586-5b0a-47b3-8270-a3468f59c866).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+**Break nothing.**
