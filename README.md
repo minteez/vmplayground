@@ -5,6 +5,8 @@ Home Page, without any VMs and with VMs
 <img width="1585" height="900" alt="image" src="https://github.com/user-attachments/assets/9a236eb2-2c1f-46f5-a3c6-f4575ee9c76a" />
 Explore OS
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/e8287fd0-228a-46f8-b0c2-26baab3ae955" />
+About VM Lab Page
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a54d5ef7-c1cd-494e-ba8b-6d7e2ff4329a" />
 
 
 **VM Playground** is an interactive browser-based virtual machine laboratory and operating-system simulator designed to bring the experience of creating, configuring, booting, and exploring virtual computers directly into the web browser.
